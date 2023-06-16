@@ -2,7 +2,8 @@
 /**
  * main - Entry point
  *
- * Description: print All single digits
+ * Description: print All single digits and just using putchar
+ * and not using char type
  *
  * Return: Always 0 (Success)
  *
