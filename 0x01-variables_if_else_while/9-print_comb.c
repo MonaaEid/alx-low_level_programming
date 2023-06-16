@@ -15,9 +15,15 @@ int main(void)
 
 	while (i < 10)
 	{
-		putchar(i + '0');
-		putchar(',');
-		putchar(' ');
+		if (i != 9)
+		{
+			putchar(i + '0');
+			putchar(',');
+			putchar(' ');
+		}
+		else
+			purchar(i + '0');
+
 	i++;
 	}
 	return (0);
