@@ -12,19 +12,12 @@
 int main(void)
 {
 	int i = 0;
-	int k;
 
 	while (i < 10)
 	{
-		k = i + 1;
-		while (k < 10)
-		{
-			putchar(i + '0');
-			putchar(',');
-			putchar(' ');
-			putchar(k + '0');
-		k++;
-		}
+		putchar(i + '0');
+		putchar(',');
+		putchar(' ');
 	i++;
 	}
 	return (0);
