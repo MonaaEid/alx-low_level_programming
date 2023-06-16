@@ -19,10 +19,10 @@ int main(void)
 		{
 			putchar(i + '0');
 			putchar(',');
-			putchar(' ');
 		}
 		else
 			putchar(i + '0');
+			putchar(' ');
 
 	i++;
 	}
