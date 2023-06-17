@@ -20,18 +20,19 @@ int main(void)
 		while (k < 10)
 		{
 			o = k + 1;
-			while (0 < 10)
+			while (o < 10)
 			{
 			if (i != k || i < k || k < o)
 			{
 				putchar(i + '0');
 				putchar(k + '0');
 				putchar(o + '0');
-				if (i + k + o < 24)
-				{
-				putchar(',');
-				putchar(' ');
-				}
+
+					if (i + k + o < 24)
+					{
+						putchar(',');
+						putchar(' ');
+					}
 			}
 			o++;
 			}
