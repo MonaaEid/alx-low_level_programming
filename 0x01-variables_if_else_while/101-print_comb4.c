@@ -22,7 +22,7 @@ int main(void)
 			o = k + 1;
 			while (0 < 10)
 			{
-			if (i != k || i < k)
+			if (i != k || i < k || k < o)
 			{
 				putchar(i + '0');
 				putchar(k + '0');
