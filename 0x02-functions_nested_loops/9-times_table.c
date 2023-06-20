@@ -10,9 +10,9 @@ void times_table(void)
 {
 	int n, i, sum;
 
-	for (n = 0; n < 9; n++)
+	for (n = 0; n <= 9; n++)
 	{
-		for (i = 0; i < 9; i++)
+		for (i = 0; i <= 9; i++)
 		{
 			sum = i * n;
 			_putchar(sum + '0');
