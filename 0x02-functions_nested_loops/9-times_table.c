@@ -16,14 +16,22 @@ void times_table(void)
 		{
 			if (i == 0)
 			{
+				sum = i * n;
 				_putchar('0');
+				_putchar(' ');
+				_putchar(' ');
+			}
+			else if (sum < 10)
+			{
+				_putchar(sum + '0');
+				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
 			}
 			else
 			{
-				sum = i * n;
-				_putchar(sum + '0');
+				_putchar(sum / 10 + '0');
+				_putchar(sum % 10 + '0');
 				_putchar(',');
 				_putchar(' ');
 			}
