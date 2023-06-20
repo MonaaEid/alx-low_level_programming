@@ -14,26 +14,26 @@ void times_table(void)
 	{
 		for (i = 0; i <= 9; i++)
 		{
+			sum = i * n;
 			if (i == 0)
 			{
-				sum = i * n;
 				_putchar('0');
 				_putchar(' ');
 				_putchar(' ');
 			}
 			else if (sum < 10)
 			{
-				_putchar(sum + '0');
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
+				_putchar(sum + '0');
 			}
 			else
 			{
-				_putchar(sum / 10 + '0');
-				_putchar(sum % 10 + '0');
 				_putchar(',');
 				_putchar(' ');
+				_putchar(sum / 10 + '0');
+				_putchar(sum % 10 + '0');
 			}
 
 		}
