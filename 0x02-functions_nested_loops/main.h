@@ -10,7 +10,7 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-void _putchar(char *chr)
+int _putchar(char *chr)
 {
 	write(1, &chr, 1);
 	return (chr);
