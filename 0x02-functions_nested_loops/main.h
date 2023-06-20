@@ -12,6 +12,7 @@
 
 void _putchar(char *chr)
 {
-	return (write(1, &chr, 1));
+	write(1, &chr, 1);
+	return (chr);
 }
 #endif /*MAIN_H_INCLUDED*/
