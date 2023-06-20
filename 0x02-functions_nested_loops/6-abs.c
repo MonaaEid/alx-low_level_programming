@@ -14,6 +14,8 @@ int _abs(int r)
 		_putchar('-' * r);
 	}
 	else
+	{
 		_putchar(r);
+	}
 	return (0);
 }
