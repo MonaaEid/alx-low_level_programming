@@ -9,13 +9,11 @@
  */
 int _abs(int)
 {
-	int r;
-
-	if (r < 0)
+	if (int < 0)
 	{
-		_putchar(r * '-');
+		_putchar(int * '-');
 	}
 	else
-		_putchar(r);
+		_putchar(int);
 	return (0);
 }
