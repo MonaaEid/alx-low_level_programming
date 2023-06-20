@@ -3,17 +3,17 @@
  * _abs - Entry point
  *
  * Description: function that computes the absolute value of an integer.
- * @int: The character to compare
+ * @r: The character to compare
  *
  * Return: Always 0 (Success)
  */
-int _abs(int)
+int _abs(int r)
 {
-	if (int < 0)
+	if (r < 0)
 	{
-		_putchar(int * '-');
+		_putchar(r * '-');
 	}
 	else
-		_putchar(int);
+		_putchar(r);
 	return (0);
 }
