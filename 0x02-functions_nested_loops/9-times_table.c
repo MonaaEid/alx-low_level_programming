@@ -16,6 +16,6 @@ void times_table(void)
 		{
 		sum = i * n;
 		}
-		return (sum);
+		_putchar(sum + '0');
 	}
 }
