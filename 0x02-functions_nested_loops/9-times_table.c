@@ -14,11 +14,19 @@ void times_table(void)
 	{
 		for (i = 0; i <= 9; i++)
 		{
-			sum = i * n;
-			_putchar(sum + '0');
-			_putchar(',');
-			_putchar(' ');
-		}
+			if (i == 0)
+			{
+				_putchar('0');
+				_putchar(' ');
+				_putchar(' ');
+			}
+			else
+			{
+				sum = i * n;
+				_putchar(sum + '0');
+				_putchar(',');
+				_putchar(' ');
+			}
 		_putchar('\n');
 	}
 }
