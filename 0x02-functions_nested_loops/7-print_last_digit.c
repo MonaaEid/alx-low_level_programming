@@ -1,9 +1,17 @@
 #include "main.h"
 /**
- * _islower - Entry point
+ * print_last_digit - Entry point
  *
- * Description:  a function that checks for lowercase character.
- * @c: The character to compare
+ * Description: a function that checks for lowercase character.
+ * @lastDigit: The character to compare
  *
  * Return: Always 0 (Success)
  */
+int print_last_digit(int lastDigit)
+{
+	int lastDigit;
+
+	lastDigit = lastDigit % 10;
+	_putchar(lastDigit);
+	return (0);
+}
