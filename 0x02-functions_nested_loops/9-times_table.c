@@ -18,9 +18,6 @@ void times_table(void)
 			if (i == 0)
 			{
 				_putchar('0');
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
 			}
 			else if (sum < 10)
 			{

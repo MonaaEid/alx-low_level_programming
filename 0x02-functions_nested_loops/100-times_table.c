@@ -36,7 +36,7 @@ void print_times_table(int n)
 					_putchar(multi % 10 + '0');
 				}
 			}
-			printf("\n");
+			_putchar('\n');
 		}
 	}
 }
