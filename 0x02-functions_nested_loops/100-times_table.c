@@ -22,10 +22,13 @@ void print_times_table(int n)
 				if (k == 0)
 				{
 					_putchar('0');
+				}
+				else if (k < 10)
+				{
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
-					_putchar(' ');
+					_putchar(multi + '0');
 				}
 				else
 				{
