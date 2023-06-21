@@ -5,19 +5,26 @@
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
+	int n = 98;
+	int fib[n];
 	int i;
-	unsigned long int a = 1, b = 2, c;
 
-	printf("%lu, %lu", a, b);
-	for (i = 2; i < 98; i++)
+	fib[0] = 1;
+	fib[1] = 2;
+	for (i = 2; i < n; i++)
 	{
-		c = a + b;
-		printf(", %lu", c);
-		a = b;
-		b = c;
+		fib[i] = fib[i - 1] + fib[i - 2];
+	}
+	for (i = 0; i < n; i++)
+	{
+		printf("%d", fib[i]);
+		if (i != n - 1)
+		{
+			printf(", ");
+		}
 	}
 	printf("\n");
-	return (0);
 }
