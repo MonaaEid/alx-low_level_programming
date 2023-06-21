@@ -10,7 +10,7 @@
  */
 void print_times_table(int n)
 {
-	int i, k, sum;
+	int i, k, multi;
 
 	if (n >= 0 && n <= 15)
 	{
@@ -18,7 +18,7 @@ void print_times_table(int n)
 		{
 			for (k = 0; k <= n; k++)
 			{
-				result = i * k;
+				multi = i * k;
 				if (k == 0)
 				{
 					_putchar('0');
@@ -32,8 +32,8 @@ void print_times_table(int n)
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
-					_putchar(sum / 10 + '0');
-					_putchar(sum % 10 + '0');
+					_putchar(multi / 10 + '0');
+					_putchar(multi % 10 + '0');
 				}
 			}
 			printf("\n");
