@@ -8,16 +8,18 @@
 
 void print_diagonal(int n)
 {
+	int i;
 	int diagonal = 0;
 
 	while (diagonal < n)
 	{
-		for (diagonal = 0; digonal < n; diagonal++)
+		for (i = 0; i < diagonal; i++)
 		{
 			_putchar(' ');
 		}
 		_putchar('/');
-		line++;
+		_putchar('\n');
+		diagonal++;
 	}
 	_putchar('\n');
 }
