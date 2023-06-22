@@ -11,15 +11,19 @@ void print_diagonal(int n)
 	int i;
 	int diagonal = 0;
 
-	while (diagonal < n)
+	if (n > 0)
 	{
-		for (i = 0; i < diagonal; i++)
+		while (diagonal < n)
 		{
-			_putchar(' ');
+			for (i = 0; i < diagonal; i++)
+			{
+				_putchar(' ');
+			}
+			_putchar('\\');
+			_putchar('\n');
+			diagonal++;
 		}
-		_putchar('\\');
-		_putchar('\n');
-		diagonal++;
 	}
-	_putchar('\n');
+	else
+		_putchar('\n');
 }
