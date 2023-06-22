@@ -29,11 +29,11 @@ int main(void)
 		{
 			printf("%d", nums);
 		}
-	}
-	if (nums < 100)
-		printf(" ");
-	else
-		printf("\n");
 
+		if (nums < 100)
+			printf(" ");
+		else
+			printf("\n");
+	}
 	return (0);
 }
