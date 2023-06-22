@@ -19,4 +19,5 @@ int main(void)
 		else
 			printf("%d ", nums);
 	}
+	return (0);
 }
