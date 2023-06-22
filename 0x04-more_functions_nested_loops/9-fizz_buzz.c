@@ -8,7 +8,7 @@ int main(void)
 {
 	int nums;
 
-	for (nums = 1; nums <= 100; nums++)
+	for (nums = 1; nums <= 100 ; nums++)
 	{
 		if ((nums % 15) == 0)
                         printf("FizzBuzz ");
