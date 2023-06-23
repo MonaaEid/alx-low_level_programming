@@ -2,7 +2,7 @@
 
 /**
  * print_number - Write a function that prints an integer.
- * @n: is the size of the triangle
+ * @n: is the intger
  * Return: Use the character # to print the triangle
  */
 void print_number(int n)
@@ -11,6 +11,10 @@ void print_number(int n)
 	{
 		_putchar('-');
 		n = -n;
+	}
+	if (n / 100 != 0)
+	{
+		print_number(n / 100);
 	}
 	if (n / 10 != 0)
 	{
