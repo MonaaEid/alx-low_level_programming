@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_number - Write a function that prints an integer.
  * @n: is the size of the triangle
@@ -14,7 +15,7 @@ void print_number(int n)
 
 	if (n / 10)
 	{
-	_putcharn(n / 10 + '0');
+	_putchar(n / 10 + '0');
 	}
 	_putchar(n % 10 + '0');
 }
