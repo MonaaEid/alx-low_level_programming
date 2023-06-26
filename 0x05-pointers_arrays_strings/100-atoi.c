@@ -10,7 +10,6 @@ int _atoi(char *s)
 	int sign = 1;
 	int f_res = 0;
 
-<<<<<<< HEAD
 	if (s[0] == '-')
 	{
 		sign = -1;
@@ -19,7 +18,6 @@ int _atoi(char *s)
 	for (; s[i] != '\0'; ++i)
 	{
 		f_res = f_res * 10 + s[i] - '0';
-=======
 	while (s[i] != '\0')
 	{
 		if (s[i] == '-')
@@ -29,7 +27,6 @@ int _atoi(char *s)
 		else if (f_res > 0)
 			break;
 		i++;
->>>>>>> d1a48b36e4db9997523a5d3871a6c5ff9bf359b9
 	}
 	return (sign * f_res);
 }
