@@ -12,7 +12,7 @@
  */
 int main(void)
 {
-	int rand;
+	int random;
 	int total;
 
 	srand(time(NULL));
@@ -20,13 +20,13 @@ int main(void)
 
 	while (total < 2772 - 122)
 	{
-		rand = rand() % 127;
-		if (rand == 0)
+		random = rand() % 127;
+		if (random == 0)
 		{
 			continue;
 		}
-		putchar(rand);
-		total += rand;
+		putchar(random);
+		total += random;
 	}
 	putchar(2772 - total);
 	return (0);
