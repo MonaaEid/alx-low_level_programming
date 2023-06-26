@@ -23,4 +23,5 @@ void rev_string(char *s)
 		k++;
 		i--;
 	}
+	return (tmp);
 }
