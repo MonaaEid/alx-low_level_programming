@@ -13,7 +13,7 @@ int _atoi(char *s)
 	while (s[i] != '\0')
 	{
 		if (s[i] == '-')
-			sign *= -1;
+			sign = -1;
 		else if (s[i] >= '0' && s[i] <= '9')
 			f_res = f_res * 10 + s[i] - '0';
 		else if (f_res > 0)
