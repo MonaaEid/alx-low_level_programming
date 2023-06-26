@@ -18,6 +18,18 @@ int _atoi(char *s)
 	for (; s[i] != '\0'; ++i)
 	{
 		f_res = f_res * 10 + s[i] - '0';
+<<<<<<< HEAD
+=======
+	while (s[i] != '\0')
+	{
+		if (s[i] == '-')
+			sign *= -1;
+		else if (s[i] >= '0' && s[i] <= '9')
+			f_res = f_res * 10 + s[i] - '0';
+		else if (f_res > 0)
+			break;
+		i++;
+>>>>>>> 64f482dc106235b056b40f0b9def646b3b0e0c4e
 	}
 	return (sign * f_res);
 }
