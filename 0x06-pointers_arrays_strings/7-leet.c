@@ -6,32 +6,21 @@
 char *leet(char *str)
 {
 	char *p = str;
-	char c;
+	char *table[] = {"4", "3", "0", "7", "1"};
+	char *letters[] = {"aA", "eE", "oO", "tT", "lL"};
 
-	while (*p)
+	for (int i = 0; i < 5; i++)
 	{
-		c = *p;
-		if (c == 'a' || c == 'A')
+		char *letter = letters[i];
+		char *encoded = table[i];
+
+		for (int j = 0; p[j] != '\0'; j++)
 		{
-			*p = '4';
+			if (p[j] == letter[0] || p[j] == letter[1])
+			{
+				p[j] = encoded[0];
+			}
 		}
-		if (c == 'e' || c == 'E')
-		{
-			*p = '3';
-		}
-		if (c == 'o' || c == 'O')
-		{
-			*p = '0';
-		}
-		if (c == 't' || c == 'T')
-		{
-			*p = '7';
-		}
-		if (c == 'l' || c == 'L')
-		{
-			*p = '1';
-		}
-		p++;
 	}
 	return (str);
 }
