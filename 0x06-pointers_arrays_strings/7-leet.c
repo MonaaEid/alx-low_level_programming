@@ -15,19 +15,19 @@ char *leet(char *str)
 		{
 			*p = '4';
 		}
-		else if (c == 'e' || c == 'E')
+		if (c == 'e' || c == 'E')
 		{
 			*p = '3';
 		}
-		else if (c == 'o' || c == 'O')
+		if (c == 'o' || c == 'O')
 		{
 			*p = '0';
 		}
-		else if (c == 't' || c == 'T')
+		if (c == 't' || c == 'T')
 		{
 			*p = '7';
 		}
-		else if (c == 'l' || c == 'L')
+		if (c == 'l' || c == 'L')
 		{
 			*p = '1';
 		}
