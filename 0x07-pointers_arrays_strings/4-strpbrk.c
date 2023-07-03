@@ -10,7 +10,6 @@
 char *_strpbrk(char *s, char *accept)
 {
 	unsigned int i, j;
-	int *p;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -18,12 +17,10 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 			{
-				p = s[i];
+				return = (&s[i]);
 			}
 
 		}
-		if (accept[j] == '\0')
-			return (NULL);
 	}
-	return (s);
+	return (NULL);
 }
