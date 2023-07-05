@@ -1,20 +1,4 @@
 /**
- * _sqrt_recursion - a function that returns the natural
- * square root of a number.
- * @n: the number
- * Return: square root
- */
-int _sqrt_recursion(int n)
-{
-	if (n < 0)
-		return (-1);
-	else if (n == 0 || n == 1)
-	{
-		return (n);
-	}
-	return (_sqrt_examine(n, 1, n));
-}
-/**
  * _sqrt_examine - a helper function that returns the
  * natural square root of a number.
  * @n: number
@@ -44,3 +28,20 @@ int _sqrt_examine(int n, int i, int k)
 	}
 	return (-1);
 }
+/**
+ * _sqrt_recursion - a function that returns the natural
+ * square root of a number.
+ * @n: the number
+ * Return: square root
+ */
+int _sqrt_recursion(int n)
+{
+	if (n < 0)
+		return (-1);
+	else if (n == 0 || n == 1)
+	{
+		return (n);
+	}
+	return (_sqrt_examine(n, 1, n));
+}
+
