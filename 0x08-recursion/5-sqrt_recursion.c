@@ -3,7 +3,7 @@
  * natural square root of a number.
  * @n: number
  * @i: current guess
- * return: natural square root of n
+ * Return: natural square root of n
  */
 int _sqrt_examine(int n, int i)
 {
@@ -17,7 +17,7 @@ int _sqrt_examine(int n, int i)
  * _sqrt_recursion - a function that returns the natural
  * square root of a number.
  * @n: the number
- * return: square root
+ * Return: square root
  */
 int _sqrt_recursion(int n)
 {
