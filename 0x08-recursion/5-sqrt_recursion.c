@@ -1,9 +1,10 @@
+#include "main.h"
 /**
  * _sqrt_examine - a helper function that returns the
  * natural square root of a number.
  * @n: number
  * @i: current guess
- * Return: natural square root of n
+ * return: natural square root of n
  */
 int _sqrt_examine(int n, int i)
 {
@@ -17,7 +18,7 @@ int _sqrt_examine(int n, int i)
  * _sqrt_recursion - a function that returns the natural
  * square root of a number.
  * @n: the number
- * Return: square root
+ * return: square root
  */
 int _sqrt_recursion(int n)
 {
