@@ -6,11 +6,9 @@
  */
 void _puts_recursion(char *s)
 {
-	while (*s != '\0')
+	if (*s != '\0')
 	{
 		return;
-		printf("%c\n", s);
-		s++;
 	}
 	_puts_recursion(s);
 }
