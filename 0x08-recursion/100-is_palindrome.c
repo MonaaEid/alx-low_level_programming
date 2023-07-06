@@ -22,14 +22,13 @@
  */
 int isPalRec(char str[],int s, int e)
 {
-    if (s == e)
-    return (1);
-
-    if (str[s] != str[e])
-    return (0);
-
-    if (s < e + 1)
-    return (isPalRec(str, s + 1, e - 1));
+	if (s == e)
+		return (1);
+	
+	if (str[s] != str[e])
+		return (0);
+	if (s < e + 1)
+		return (isPalRec(str, s + 1, e - 1));
 }
 
 int is_palindrome(char *s)
