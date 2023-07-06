@@ -35,7 +35,7 @@ int isPalRec(char str[],int s, int e)
 
 int is_palindrome(char *s)
 {
-int n = strlen(str);
+int n = strlen(s);
 
 if (n == 0)
     return ();
