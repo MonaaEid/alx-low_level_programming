@@ -23,6 +23,8 @@ int isPalRec(char str[], int s, int e)
 	{
 		return (isPalRec(str, s + 1, e - 1));
 	}
+	else
+		return(0);
 }
 
 /**
