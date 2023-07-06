@@ -30,7 +30,6 @@ int isPalRec(char str[],int s, int e)
 
     if (s < e + 1)
     return (isPalRec(str, s + 1, e - 1));
-
 }
 
 int is_palindrome(char *s)
@@ -38,7 +37,7 @@ int is_palindrome(char *s)
 int n = strlen(s);
 
 if (n == 0)
-    return ();
+    return (1);
 
 return isPalRec(s, 0, n - 1);
 }
