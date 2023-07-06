@@ -27,7 +27,7 @@ int isPalRec(char str[],int s, int e)
 	
 	else if (str[s] != str[e])
 		return (0);
-	else if (s < e + 1)
+	else
 		return (isPalRec(str, s + 1, e - 1));
 }
 
