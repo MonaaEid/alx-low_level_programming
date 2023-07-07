@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * main - Entry point
@@ -10,11 +11,13 @@
 
 int main(int argc, char *argv[])
 {
-	int mul;
+	int mul, m, n;
 
 	if (argc == 3)
 	{
-		mul = argv[1] * argv[2];
+		m = atoi(argv[1]);
+		n = atoi(argv[2]);
+		mul = m * n;
 		printf("%d\n", mul);
 	}
 	else if (argc != 3)
