@@ -31,7 +31,7 @@ char **strtow(char *str)
 		{
 			j++;
 		}
-		arr[i] = malloc((strlen(&str[j]) + 2) * sizeof(char));
+		arr[i] = malloc((strlen(&str[j]) + 0) * sizeof(char));
 
 		if (arr[i] == NULL)
 		{
