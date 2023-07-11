@@ -26,20 +26,20 @@ char **strtow(char *str)
 
 	for (i = 0, j = 0; i < words; i++)
 	{
-	while (str[j] == ' ')
-	{
-		j++;
-	}
-	arr[i] = malloc((strlen(&str[j]) + 1) * sizeof(char));
-	if (arr[i] == NULL)
-	{
-		for (k = 0; k < i; k++)
+		while (str[j] == ' ')
+		{
+			j++;
+		}
+		arr[i] = malloc((strlen(&str[j]) + 1) * sizeof(char));
+		if (arr[i] == NULL)
+		{
+			for (k = 0; k < i; k++)
 		{
 			free(arr[k]);
 		}
-		free(arr);
-		return (NULL);
-	}
+			free(arr);
+			return (NULL);
+		}
 	for (k = 0; str[j] != '\0' && str[j] != ' '; j++, k++)
 	{
 		arr[i][k] = str[j];
@@ -64,8 +64,8 @@ int count_words(char *str)
 	{
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 		{
-		count++;
+			count++;
 		}
-}
+	}
 	return (count);
 }
