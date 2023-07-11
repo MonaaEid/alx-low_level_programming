@@ -30,7 +30,8 @@ char **strtow(char *str)
 		{
 			j++;
 		}
-		arr[i] = malloc((strlen(&str[j]) + 1) * sizeof(char));
+		arr[i] = malloc((word_len(&str[j]) + 1) * sizeof(char));
+
 		if (arr[i] == NULL)
 		{
 			for (k = 0; k < i; k++)
@@ -68,4 +69,16 @@ int count_words(char *str)
 		}
 	}
 	return (count);
+}
+/**
+ * word_len - function that count word length
+ * @str: string
+ * Return: i
+ */
+int word_len(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0' && str[i] != ' '; i++)
+		return (i);
 }
