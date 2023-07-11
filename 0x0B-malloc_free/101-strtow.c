@@ -7,6 +7,7 @@
  * Return: NULL
  */
 int count_words(char *str);
+int word_len(char *str);
 
 char **strtow(char *str)
 {
