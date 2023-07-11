@@ -40,6 +40,6 @@ char *argstostr(int ac, char **av)
 		new_arr[len] = '\n';
 		len++;
 	}
-	new_arr[len] = '\0';
+	new_arr[len - 1] = '\0';
 	return (new_arr);
 }
