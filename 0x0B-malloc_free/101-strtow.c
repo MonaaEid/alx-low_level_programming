@@ -85,4 +85,6 @@ int word_len(char *str)
 		for (i = 0; str[i] != '\0' && str[i] != ' '; i++)
 			return (i);
 	}
+	else
+		return (0);
 }
