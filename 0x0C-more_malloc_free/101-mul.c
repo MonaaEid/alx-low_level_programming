@@ -112,7 +112,7 @@ int main(int argc, char **argv)
 	{
 		if (!_isdigit(*num2))
 		{
-			printf("Errorr\n");
+			printf("Error");
 			return (98);
 		}
 		num2++;
