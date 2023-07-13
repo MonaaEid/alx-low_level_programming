@@ -92,7 +92,7 @@ int main(int argc, char **argv)
 	if (argc != 3)
 	{
 		printf("Error\n");
-	/*	return (98);*/
+		return (98);
 	}
 
 	num1 = argv[1];
@@ -119,7 +119,7 @@ int main(int argc, char **argv)
 	}
 
 	product = mul(argv[1], argv[2]);
-	printf("%s\n", product);
+	printf("%s", product);
 	free(product);
 
 	return (0);
