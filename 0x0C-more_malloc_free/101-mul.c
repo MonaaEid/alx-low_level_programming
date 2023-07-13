@@ -102,7 +102,7 @@ int main(int argc, char **argv)
 
 	while (*num1)
 	{
-		if (!isdigit(*num1))
+		if (!_isdigit(*num1))
 		{
 			printf("Error\n");
 			return (98);
@@ -112,7 +112,7 @@ int main(int argc, char **argv)
 
 	while (*num2)
 	{
-		if (!isdigit(*num2))
+		if (!_isdigit(*num2))
 		{
 			printf("Error\n");
 			return (98);
