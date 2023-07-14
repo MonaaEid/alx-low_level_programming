@@ -91,7 +91,6 @@ int main(int argc, char **argv)
 {
 	char *num1, *num2, *product;
 
-	errno = 98;
 
 	if (argc != 3)
 	{
@@ -106,10 +105,8 @@ int main(int argc, char **argv)
 	{
 		if (!isdigit(*num1))
 		{
-		/*printf("Error\n"); */
-
-			printf("Error %s\n", strerror(errno));
-			/*exit(EXIT_FAILURE);*/
+			printf("Error\n"); 
+			exit(98);
 		}
 		num1++;
 	}
