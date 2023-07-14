@@ -39,8 +39,8 @@ int _strlen(char *s)
  */
 char *mul(char *num1, char *num2)
 {
-	int len1 = _strlen(num1);
-	int len2 = _strlen(num2);
+	int len1 = strlen(num1);
+	int len2 = strlen(num2);
 	int i, j, k;
 	int carry = 0;
 	int sum = 0;
@@ -103,7 +103,7 @@ int main(int argc, char **argv)
 
 	while (*num1)
 	{
-		if (!_isdigit(*num1))
+		if (!isdigit(*num1))
 		{
 			printf("Error\n");
 			exit(98);
@@ -113,7 +113,7 @@ int main(int argc, char **argv)
 
 	while (*num2)
 	{
-		if (!_isdigit(*num2))
+		if (!isdigit(*num2))
 		{
 			printf("Error\n");
 			exit(98);
