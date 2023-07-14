@@ -92,7 +92,7 @@ int main(int argc, char **argv)
 	if (argc != 3)
 	{
 		printf("Error\n");
-		ireturn (98);
+		return (98);
 	}
 
 	num1 = argv[1];
@@ -112,7 +112,7 @@ int main(int argc, char **argv)
 	{
 		if (!_isdigit(*num2))
 		{
-			printf("Error");
+			printf("Error\n");
 			return (98);
 		}
 		num2++;
