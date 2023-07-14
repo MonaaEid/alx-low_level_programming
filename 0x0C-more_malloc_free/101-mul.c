@@ -92,7 +92,7 @@ int main(int argc, char **argv)
 	if (argc != 3)
 	{
 		printf("Error\n");
-		return (98);
+		ireturn (98);
 	}
 
 	num1 = argv[1];
@@ -108,15 +108,15 @@ int main(int argc, char **argv)
 		num1++;
 	}
 
-/*	while (*num2)
-	{ */
+	while (*num2)
+	{
 		if (!_isdigit(*num2))
 		{
-			printf("Error\n");
+			printf("Error");
 			return (98);
 		}
 		num2++;
-/*	}*/
+	}
 
 	product = mul(argv[1], argv[2]);
 	printf("%s\n", product);
