@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "main.h"
+#include <ctype.h>
 /**
  * _isdigit - Checks if a character is a digit.
  * @c: The character to be checked.
@@ -100,7 +101,7 @@ int main(int argc, char **argv)
 
 	while (*num1)
 	{
-		if (!_isdigit(*num1))
+		if (! isdigit(*num1))
 		{
 			printf("Error\n");
 			return (98);
@@ -110,7 +111,7 @@ int main(int argc, char **argv)
 
 	while (*num2)
 	{
-		if (!_isdigit(*num2))
+		if (! isdigit(*num2))
 		{
 			printf("Error\n");
 			return (98);
