@@ -107,7 +107,7 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		printf("Error\n");
+		/*printf("Error\n");*/
 		error(98);
 	}
 
@@ -118,7 +118,7 @@ int main(int argc, char **argv)
 	{
 		if (!isdigit(*num1))
 		{
-			printf("Error\n");
+			/*printf("Error\n");*/
 			error(98);
 		}
 		num1++;
@@ -128,7 +128,7 @@ int main(int argc, char **argv)
 	{
 		if (!isdigit(*num2))
 		{
-			printf("Error\n");
+			/*printf("Error\n");*/
 			error(98);
 		}
 		num2++;
