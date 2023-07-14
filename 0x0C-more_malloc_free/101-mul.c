@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <errno.h>
 #include <stdlib.h>
 #include <string.h>
 #include "main.h"
@@ -90,6 +91,8 @@ int main(int argc, char **argv)
 {
 	char *num1, *num2, *product;
 
+	errno = 98;
+
 	if (argc != 3)
 	{
 		printf("Error\n");
@@ -103,7 +106,9 @@ int main(int argc, char **argv)
 	{
 		if (!isdigit(*num1))
 		{
-			printf("Error\n");
+		/*printf("Error\n"); */
+			perror("Error");
+			printf(stderr, "%s\n", strerror(errno));
 			exit(98);
 		}
 		num1++;
