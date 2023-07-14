@@ -109,7 +109,7 @@ int main(int argc, char **argv)
 		/*printf("Error\n"); */
 			perror("Error");
 			printf(stderr, "%s\n", strerror(errno));
-			exit(98);
+			exit(EXIT_FAILURE);
 		}
 		num1++;
 	}
