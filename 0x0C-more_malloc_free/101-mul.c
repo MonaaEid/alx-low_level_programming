@@ -80,21 +80,6 @@ char *mul(char *num1, char *num2)
 	return (result);
 }
 /**
- * error - error return
- *
- * @status: error code to exit with
- */
-void error(int status)
-{
-	_putchar('E');
-	_putchar('r');
-	_putchar('r');
-	_putchar('o');
-	_putchar('r');
-	_putchar('\n');
-	exit(status);
-}
-/**
  * main - Multiplies two positive numbers.
  * @argc: The number of arguments passed to the program.
  * @argv: An array of pointers to the arguments passed to the program.
@@ -107,8 +92,8 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		/*printf("Error\n");*/
-		error(98);
+		printf("Error\n");
+		exit(98);
 	}
 
 	num1 = argv[1];
@@ -118,8 +103,8 @@ int main(int argc, char **argv)
 	{
 		if (!isdigit(*num1))
 		{
-			/*printf("Error\n");*/
-			error(98);
+			printf("Error\n");
+			exit(98);
 		}
 		num1++;
 	}
@@ -128,8 +113,8 @@ int main(int argc, char **argv)
 	{
 		if (!isdigit(*num2))
 		{
-			/*printf("Error\n");*/
-			error(98);
+			printf("Error\n");
+			exit(98);
 		}
 		num2++;
 	}
