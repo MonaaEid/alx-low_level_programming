@@ -8,9 +8,6 @@
  */
 int main(void)
 {
-	char fileName[10];
-
-	strcpy(fileName, __FILE__);
-	printf("%s\n", fileName);
+	printf("%s\n", __FILE__);
 	return (0);
 }
