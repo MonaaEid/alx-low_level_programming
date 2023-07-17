@@ -1,5 +1,6 @@
+#include <stddef.h>
 #include "dog.h"
-
+#include <stdlib.h>
 /**
  * free_dog - frees dogs.
  * @d: pointer to dog.
