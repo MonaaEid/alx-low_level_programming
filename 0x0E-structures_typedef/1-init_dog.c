@@ -9,6 +9,8 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	dog *d = {.name = name, .age = age, .owner = owner};
+	if (d == NULL)
+		return;
+	d = {.name = name, .age = age, .owner = owner};
 
 }
