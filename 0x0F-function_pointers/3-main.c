@@ -10,25 +10,34 @@
  */
 int main(int argc, char **argv)
 {
-	int a, b, result;
+int one, two, ans;
+	int (*res)(int, int);
+	char *get_op;
 
 	if (argc != 4)
 	{
-		printf("Usage: %s <operation> <a> <b>\n", argv[0]);
-		return (1);
+		printf("Error\n");
+		exit(98);
 	}
-	char *op = argv[1];
 
-	a = atoi(argv[2]);
-	b = atoi(argv[3]);
-	int (*op_func)(int, int) = get_op_func(op);
+	one = atoi(argv[1]);
+	two = atoi(argv[3]);
+	get_op = argv[2];
 
-	if (op_func == NULL)
+	if (get_op_func(argv[2]) == NULL || argv[2][1] != '\0')
 	{
-		printf("Invalid operation: %s\n", op);
-		return (2);
+		printf("Error\n");
+		exit(99);
 	}
-	result = op_func(a, b);
-	printf("%d\n", result);
-	return (0);
-}
+
+	if ((*get_op == '/' || *get_op == '%') && (*argv[3] == '0'))
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
+	res = get_op_func(get_op);
+	ans = res(one, two);
+
+	printf("%d\n", ans);
+	return (0);}
