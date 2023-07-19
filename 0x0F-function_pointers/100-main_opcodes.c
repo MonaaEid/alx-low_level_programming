@@ -11,9 +11,7 @@ int main(int argc, char **argv)
 {
 	int i;
 	int bytes;
-	
-	if (argv == NULL)
-		return (NULL);
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -30,7 +28,10 @@ int main(int argc, char **argv)
 	for (i = 0; i < bytes; i++)
 	{
 		printf("%02x", *(ptr + i));
+		if (i < bytes - 1)
+			printf(" ");
+		else
+			printf("\n");
 	}
-	printf("\n");
 	return (0);
 }
