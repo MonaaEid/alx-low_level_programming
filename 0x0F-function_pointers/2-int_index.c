@@ -27,12 +27,4 @@ int int_index(int *array, int size, int (*cmp)(int))
 	}
 	return (-1);
 }
-/**
- * cmp - function that searches for an integer
- * @n: the intgers
- * Return: 0 or 1
- */
-int cmp(int n)
-{
-	return (n == 5);
-}
+
