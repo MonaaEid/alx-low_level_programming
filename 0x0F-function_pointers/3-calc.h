@@ -1,5 +1,5 @@
-#ifndef _cal_h_
-#define _cal_h_
+#ifndef CALC_H_
+#define CALC_H_
 int (*get_op_func(char *s))(int, int);
 int op_add(int a, int b);
 int op_sub(int a, int b);
