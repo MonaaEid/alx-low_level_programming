@@ -11,7 +11,9 @@ int main(int argc, char **argv)
 {
 	int i;
 	int bytes;
-
+	
+	if (argv == NULL)
+		return (NULL);
 	if (argc != 2)
 	{
 		printf("Error\n");
