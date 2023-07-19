@@ -1,3 +1,4 @@
+#include <stdio.h>
 void print_opcodes(char *start, char *end)
 {
 	char *ptr;
