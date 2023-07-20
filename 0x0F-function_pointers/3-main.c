@@ -11,17 +11,18 @@
 int main(int argc, char **argv)
 {
 	int a, b, result;
-
+	int (*op_func)(int, int);
+	char *op;
 	if (argc != 4)
 	{
-		printf("Usage: %s <operation> <a> <b>\n", argv[0]);
-		return (1);
+		printf("Error\n");
+		exit(98);
 	}
-	char *op = argv[1];
 
-	a = atoi(argv[2]);
+	op = argv[2];
+	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	int (*op_func)(int, int) = get_op_func(op);
+	/*int (*op_func)(int, int) = get_op_func(op);*/
 
 	if (op_func == NULL)
 	{
