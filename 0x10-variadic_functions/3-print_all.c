@@ -8,10 +8,10 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	const char *p;
+	const char *p = format;
 
 	va_start(args, format);
-	for (p = format; *p != '\0'; p++)
+	while (*p != '\0')
 	{
 		switch (*p)
 		{
@@ -32,13 +32,12 @@ void print_all(const char * const format, ...)
 					{
 						printf("(nil)");
 					}
-					else
-					{
+					
 						printf("%s", s);
-					}
 					break;
 				}
 		}
+		p++;
 	}
 	printf("\n");
 	va_end(args);
