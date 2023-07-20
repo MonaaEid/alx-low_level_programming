@@ -10,16 +10,10 @@ void print_all(const char * const format, ...)
 	va_list args;
 	const char *p = format;
 	char *sep = "";
-	int i, n;
+	
 	va_start(args, format);
-	while (format && format[i])
-		i++;
 	while (*p != '\0')
 	{
-		if (n  == (i - 1))
-		{
-			sep = "";
-		}
 		switch (*p)
 		{
 			case 'c':
