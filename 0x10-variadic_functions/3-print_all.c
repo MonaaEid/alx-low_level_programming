@@ -31,11 +31,11 @@ void print_all(const char * const format, ...)
 
 					if (s == NULL)
 					{
-						printf("%s(nil)", sep);
+						printf("(nil)");
 					}
 					if (s != NULL)
 					{
-						printf("%s%s", s, sep);
+						printf("%s%s", sep, s);
 					}
 					break;
 				}
