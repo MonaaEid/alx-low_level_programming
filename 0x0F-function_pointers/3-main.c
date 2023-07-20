@@ -23,12 +23,18 @@ int main(int argc, char **argv)
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	/*int (*op_func)(int, int) = get_op_func(op);*/
-
-	if (op_func == NULL)
+	if (get_op_func(argv[2]) == NULL || argv[2][1] != '\0')
 	{
-		printf("Invalid operation: %s\n", op);
-		return (2);
+		printf("Error\n");
+		exit(99);
 	}
+	if ((*op == '/' || *op == '%') && (*argv[3] == '0'))
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
+	op_func = get_op_func(op);
 	result = op_func(a, b);
 	printf("%d\n", result);
 	return (0);
