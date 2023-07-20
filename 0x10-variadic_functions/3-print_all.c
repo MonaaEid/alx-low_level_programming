@@ -35,8 +35,7 @@ void print_all(const char * const format, ...)
 					}
 					if (s != NULL)
 					{
-						printf("%s", s);
-						putchar(' ');
+						printf("%s%s", sep, s);
 					}
 					break;
 				}
