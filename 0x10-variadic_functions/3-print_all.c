@@ -32,8 +32,10 @@ void print_all(const char * const format, ...)
 					{
 						printf("(nil)");
 					}
-					
+					if (s != NULL)
+					{
 						printf("%s", s);
+					}
 					break;
 				}
 		}
