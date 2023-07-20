@@ -20,10 +20,10 @@ void print_all(const char * const format, ...)
 				printf("%s%c", sep, va_arg(args, int));
 				break;
 			case 'i':
-				printf("%s%d", sep, va_arg(args, int));
+				printf("%s%di", sep, va_arg(args, int));
 				break;
 			case 'f':
-				printf("%s%fi", sep, va_arg(args, double));
+				printf("%s%f", sep, va_arg(args, double));
 				break;
 			case 's':
 				{
