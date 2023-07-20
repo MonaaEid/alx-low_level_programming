@@ -35,6 +35,11 @@ void print_all(const char * const format, ...)
 						printf("%s%s", s, sep);
 						/*printf("%s(nil)", sep);*/
 					}
+					if (s != NULL)
+					{
+						printf("%s", s);
+						putchar(' ');
+					}
 					break;
 				}
 		}
