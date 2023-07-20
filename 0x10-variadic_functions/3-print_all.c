@@ -17,12 +17,15 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				printf("%c", va_arg(args, int));
+				putchar(' ');
 				break;
 			case 'i':
 				printf("%d", va_arg(args, int));
+				putchar(' ');
 				break;
 			case 'f':
 				printf("%f", va_arg(args, double));
+				putchar(' ');
 				break;
 			case 's':
 				{
@@ -35,6 +38,7 @@ void print_all(const char * const format, ...)
 					if (s != NULL)
 					{
 						printf("%s", s);
+						putchar(' ');
 					}
 					break;
 				}
