@@ -13,6 +13,7 @@ int main(int argc, char **argv)
 	int a, b, result;
 	int (*op_func)(int, int);
 	char *op;
+
 	if (argc != 4)
 	{
 		printf("Error\n");
