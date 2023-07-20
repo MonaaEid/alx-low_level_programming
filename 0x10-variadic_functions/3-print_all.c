@@ -11,11 +11,11 @@ void print_all(const char * const format, ...)
 	const char *p;
 
 	va_start(args, format);
-	for (*p = format; *p != '\0'; p++)
+	for (p = format; *p != '\0'; p++)
 	{
 		switch (*p)
 		{
-			case 'c';
+			case 'c':
 				printf("%c", va_arg(args, int));
 				break;
 			case 'i':
