@@ -10,7 +10,7 @@ void print_all(const char * const format, ...)
 	va_list args;
 	const char *p = format;
 	char *sep = "";
-	
+
 	va_start(args, format);
 	while (*p != '\0')
 	{
