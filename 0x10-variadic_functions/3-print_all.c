@@ -17,13 +17,13 @@ void print_all(const char * const format, ...)
 		switch (*p)
 		{
 			case 'c':
-				printf("%s%c", sep, va_arg(args, int));
+				printf("%c%s", va_arg(args, int), sep);
 				break;
 			case 'i':
-				printf("%s%d", sep, va_arg(args, int));
+				printf("%d%s", va_arg(args, int), sep);
 				break;
 			case 'f':
-				printf("%s%f", sep, va_arg(args, double));
+				printf("%f%s", va_arg(args, double), sep);
 				break;
 			case 's':
 				{
@@ -31,11 +31,11 @@ void print_all(const char * const format, ...)
 
 					if (s == NULL)
 					{
-						printf("%s(nill)", sep);
+						printf("%s(nil)", sep);
 					}
 					if (s != NULL)
 					{
-						printf("%s%s", sep, s);
+						printf("%s%s", s, sep);
 					}
 					break;
 				}
