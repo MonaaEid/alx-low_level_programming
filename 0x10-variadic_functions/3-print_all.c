@@ -9,6 +9,7 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	const char *p = format;
+	char *sep = "";
 
 	va_start(args, format);
 	while (*p != '\0')
@@ -16,16 +17,13 @@ void print_all(const char * const format, ...)
 		switch (*p)
 		{
 			case 'c':
-				printf("%c", va_arg(args, int));
-				putchar(' ');
+				printf("%s%c", sep, va_arg(args, int));
 				break;
 			case 'i':
-				printf("%d", va_arg(args, int));
-				putchar(' ');
+				printf("%s%d", sep, va_arg(args, int));
 				break;
 			case 'f':
-				printf("%f", va_arg(args, double));
-				putchar(' ');
+				printf("%s%f", sep, va_arg(args, double));
 				break;
 			case 's':
 				{
@@ -33,16 +31,16 @@ void print_all(const char * const format, ...)
 
 					if (s == NULL)
 					{
-						printf("(nil)");
+						printf("%s(nil)", sep);
 					}
 					if (s != NULL)
 					{
-						printf("%s", s);
-						putchar(' ');
+						printf("%s%s", sep, s);
 					}
 					break;
 				}
 		}
+		sep = ", ";
 		p++;
 	}
 	printf("\n");
