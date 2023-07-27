@@ -6,17 +6,16 @@ global main
 main:
 push rbp
 
+mov rdi, fmt
+mov rsi, msg
+mov rax, 0
+call printf
+
+pop rbp
+
+mov rax, 0
+ret
+
 section .data
-    hello db 'Hello, Holberton', 0xA, 0
-section .text
-    global _start
-    extern printf
-_start:
-    push rbp
-    mov rbp, rsp
-    lea rdi, [rel hello]
-    xor eax, eax
-    call printf
-    xor eax, eax
-    pop rbp
-    ret
+msg: db "Hello, Holberton", 0
+fmt: db "%s", 10, 0
