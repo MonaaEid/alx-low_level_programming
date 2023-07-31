@@ -9,31 +9,30 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-size_t count = 0;
-const listint_t *slow, *fast, *loop;
+	size_t count = 0;
+	const listint_t *slow, *fast, *loop;
 
-if (head == NULL)
-    exit(98);
+	if (head == NULL)
+		exit(98);
+	slow = head;
+	fast = head->next;
+	while (fast != NULL && fast->next != NULL)
+	{
+		if (slow == fast)
+		{
+			loop = find_loop(head, slow);
+			break;
+		}
+		slow = slow->next;
+		fast = fast->next->next;
+	}
 
-slow = head;
-fast = head->next;
-while (fast != NULL && fast->next != NULL)
-{
-    if (slow == fast)
-    {
-        loop = find_loop(head, slow);
-        break;
-    }
-    slow = slow->next;
-    fast = fast->next->next;
-}
+	if (loop == NULL)
+		return (print_list(head));
 
-if (loop == NULL)
-    return (print_list(head));
-
-count = print_list_until(head, loop);
-printf("-> [%p] %d\n", (void *)loop, loop->n);
-return (count + 1);
+	count = print_list_until(head, loop);
+	printf("-> [%p] %d\n", (void *)loop, loop->n);
+	return (count + 1);
 }
 
 /**
@@ -44,16 +43,16 @@ return (count + 1);
  */
 const listint_t *find_loop(const listint_t *head, const listint_t *meet)
 {
-const listint_t *start, *end;
+	const listint_t *start, *end;
 
-start = head;
-end = meet;
-while (start != end)
-{
-    start = start->next;
-    end = end->next;
-}
-return (start);
+	start = head;
+	end = meet;
+	while (start != end)
+	{
+		start = start->next;
+		end = end->next;
+	}
+	return (start);
 }
 
 /**
@@ -63,15 +62,15 @@ return (start);
  */
 size_t print_list(const listint_t *head)
 {
-size_t count = 0;
+	size_t count = 0;
 
-while (head != NULL)
-{
-    printf("[%p] %d\n", (void *)head, head->n);
-    count++;
-    head = head->next;
-}
-return (count);
+	while (head != NULL)
+	{
+		printf("[%p] %d\n", (void *)head, head->n);
+		count++;
+		head = head->next;
+	}
+	return (count);
 }
 
 /**
@@ -82,14 +81,13 @@ return (count);
  */
 size_t print_list_until(const listint_t *head, const listint_t *stop)
 {
-size_t count = 0;
+	size_t count = 0;
 
-while (head != stop)
-{
-    printf("[%p] %d\n", (void *)head, head->n);
-    count++;
-    head = head->next;
+	while (head != stop)
+	{
+		printf("[%p] %d\n", (void *)head, head->n);
+		count++;
+		head = head->next;
+	}
+	return (count);
 }
-return (count);
-}
-
