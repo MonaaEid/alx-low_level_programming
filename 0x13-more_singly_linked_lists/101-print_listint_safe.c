@@ -1,5 +1,7 @@
 #include "lists.h"
-
+#include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
 /**
  * print_listint_safe - prints a listint_t linked list
  * @head: pointer to the first node of the list
