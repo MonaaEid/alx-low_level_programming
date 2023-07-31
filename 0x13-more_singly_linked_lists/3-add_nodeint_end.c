@@ -4,10 +4,9 @@
 #include <string.h>
 #include <stdlib.h>
 /**
- * add_nodeint_end - a function that adds a new node
- * at the end of a listint_t list.
+ * add_nodeint_end- a function that adds a new node at the end of a list_t list
  * @head: the beggining of  list
- * @n: string
+ * @n: the number
  * Return: the new nodes
  */
 
@@ -19,8 +18,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	if (new_node == NULL)
 		return (NULL);
 
-	new_node->n = strdup(n);
-	new_node->len = strlen(n);
+	new_node->n = n;
 	new_node->next = NULL;
 
 	if (*head == NULL)
