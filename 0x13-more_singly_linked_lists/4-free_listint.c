@@ -7,18 +7,15 @@
  * free_listint - function that frees a listint_t list.
  * @head: the beggining of  list
  *
- * Return: the new nodes
  */
 void free_listint(listint_t *head)
 {
-	listint_t *current = head;
-	listint_t *next;
+	listint_t *tmp;
 
-	while (current != NULL)
+	while (head != NULL)
 	{
-		next = current->next;
-		free(current->n);
-		free(current);
-		current = next;
+		tmp = head;
+		head = head->next;
+		free(tmp);
 	}
 }
