@@ -10,39 +10,25 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *slow, *fast;
+	listint_t *slow = head;
+	listint_t *fast = head;
 
-	if (head == NULL)
-		return (NULL);
-
-	slow = head;
-	fast = head->next;
-	while (fast != NULL && fast->next != NULL)
+	while (slow != NULL && fast != NULL && fast->next != NULL)
 	{
-		if (slow == fast)
-			return (find_start(head, slow));
 		slow = slow->next;
-		fast = fast->next->next;
-	}
+		fast = (fast->next)->next;
+
+		if (slow == fast)
+		{
+			slow = head;
+			while (slow != fast)
+			{
+				slow = slow->next;
+				fast = fast->next;
+			}
+
+			return (slow);
+		}
 	return (NULL);
-}
-
-/**
- * find_start - finds the node where the loop starts
- * @head: pointer to the first node of the list
- * @meet: pointer to the node where slow and fast pointers meet
- * Return: pointer to the node where the loop starts
- */
-listint_t *find_start(listint_t *head, listint_t *meet)
-{
-	listint_t *start, *end;
-
-	start = head;
-	end = meet;
-	while (start != end)
-	{
-		start = start->next;
-		end = end->next;
 	}
-	return (start);
 }
