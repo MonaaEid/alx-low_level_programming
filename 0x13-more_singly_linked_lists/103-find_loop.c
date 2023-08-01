@@ -9,21 +9,21 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-    listint_t *slow, *fast;
+	listint_t *slow, *fast;
 
-    if (head == NULL)
-        return (NULL);
+	if (head == NULL)
+		return (NULL);
 
-    slow = head;
-    fast = head->next;
-    while (fast != NULL && fast->next != NULL)
-    {
-        if (slow == fast)
-            return (find_start(head, slow));
-        slow = slow->next;
-        fast = fast->next->next;
-    }
-    return (NULL);
+	slow = head;
+	fast = head->next;
+	while (fast != NULL && fast->next != NULL)
+	{
+		if (slow == fast)
+			return (find_start(head, slow));
+		slow = slow->next;
+		fast = fast->next->next;
+	}
+	return (NULL);
 }
 
 /**
@@ -34,15 +34,14 @@ listint_t *find_listint_loop(listint_t *head)
  */
 listint_t *find_start(listint_t *head, listint_t *meet)
 {
-    listint_t *start, *end;
+	listint_t *start, *end;
 
-    start = head;
-    end = meet;
-    while (start != end)
-    {
-        start = start->next;
-        end = end->next;
-    }
-    return (start);
+	start = head;
+	end = meet;
+	while (start != end)
+	{
+		start = start->next;
+		end = end->next;
+	}
+	return (start);
 }
-

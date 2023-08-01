@@ -9,30 +9,29 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-    size_t count = 0;
-    listint_t *current, *next, *loop;
+	size_t count = 0;
+	listint_t *current, *next, *loop;
 
-    if (h == NULL || *h == NULL)
-        return (0);
+	if (h == NULL || *h == NULL)
+		return (0);
 
-    loop = find_loop(*h);
-    current = *h;
-    while (current != loop)
-    {
-        next = current->next;
-        free(current);
-        count++;
-        current = next;
-    }
+	loop = find_loop(*h);
+	current = *h;
+	while (current != loop)
+	{
+		next = current->next;
+		free(current);
+		count++;
+		current = next;
+	}
+	if (loop != NULL)
+	{
+		free_loop(loop);
+		count++;
+	}
 
-    if (loop != NULL)
-    {
-        free_loop(loop);
-        count++;
-    }
-
-    *h = NULL;
-    return (count);
+	*h = NULL;
+	return (count);
 }
 
 /**
@@ -42,18 +41,18 @@ size_t free_listint_safe(listint_t **h)
  */
 listint_t *find_loop(listint_t *head)
 {
-    listint_t *slow, *fast;
+	listint_t *slow, *fast;
 
-    slow = head;
-    fast = head->next;
-    while (fast != NULL && fast->next != NULL)
-    {
-        if (slow == fast)
-            return (find_start(head, slow));
-        slow = slow->next;
-        fast = fast->next->next;
-    }
-    return (NULL);
+	slow = head;
+	fast = head->next;
+	while (fast != NULL && fast->next != NULL)
+	{
+		if (slow == fast)
+			return (find_start(head, slow));
+		slow = slow->next;
+		fast = fast->next->next;
+	}
+	return (NULL);
 }
 
 /**
@@ -64,16 +63,16 @@ listint_t *find_loop(listint_t *head)
  */
 listint_t *find_start(listint_t *head, listint_t *meet)
 {
-    listint_t *start, *end;
+	listint_t *start, *end;
 
-    start = head;
-    end = meet;
-    while (start != end)
-    {
-        start = start->next;
-        end = end->next;
-    }
-    return (start);
+	start = head;
+	end = meet;
+	while (start != end)
+	{
+		start = start->next;
+		end = end->next;
+	}
+	return (start);
 }
 
 /**
@@ -82,15 +81,14 @@ listint_t *find_start(listint_t *head, listint_t *meet)
  */
 void free_loop(listint_t *loop)
 {
-    listint_t *current, *next;
+	listint_t *current, *next;
 
-    current = loop->next;
-    while (current != loop)
-    {
-        next = current->next;
-        free(current);
-        current = next;
-    }
-    free(loop);
+	current = loop->next;
+	while (current != loop)
+	{
+		next = current->next;
+		free(current);
+		current = next;
+	}
+	free(loop);
 }
-
