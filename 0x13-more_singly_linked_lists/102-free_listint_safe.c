@@ -15,7 +15,7 @@ size_t free_listint_safe(listint_t **h)
 	if (h == NULL || *h == NULL)
 		return (0);
 
-	loop = find_loop(*h);
+	loop = find_iloop(*h);
 	current = *h;
 	while (current != loop)
 	{
@@ -35,11 +35,11 @@ size_t free_listint_safe(listint_t **h)
 }
 
 /**
- * find_loop - finds the node where the loop starts
+ * find_iloop - finds the node where the loop starts
  * @head: pointer to the first node of the list
  * Return: pointer to the node where the loop starts, or NULL if no loop
  */
-listint_t *find_loop(listint_t *head)
+listint_t *find_iloop(listint_t *head)
 {
 	listint_t *slow, *fast;
 
