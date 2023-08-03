@@ -5,25 +5,11 @@
  */
 int get_endianness(void)
 {
-	/**
-	 * A union that can store an int or a char array
-	 * @union my_union
-	 * @members
-	 *  int i: the int member
-	 *  char c[sizeof(int)]: the char array member
-	 * @var u
-	 * The union variable
-	 */
-	union my_union
-	{
-		int i;
-		char c[sizeof(int)];
-	} u;
+	unsigned int x;
+	char *c;
 
-	u.i = 1;
+	x = 1;
+	c = (char *) &x;
 
-	if (u.c[0] == 1)
-		return (1);
-	else
-		return (0);
+	return ((int)*c);
 }
