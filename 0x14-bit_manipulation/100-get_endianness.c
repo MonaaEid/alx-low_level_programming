@@ -5,11 +5,25 @@
  */
 int get_endianness(void)
 {
-	unsigned int i;
-	char *c;
+	/**
+	 * @union my_union
+	 * @members
+	 *  int i: the int member
+	 *  char c[sizeof(int)]: the char array member
+	 * @var u
+	 * The union variable
+	 */
 
-	i = 1;
-	c = (char *) &i;
+	union
+	{
+		int i;
+		char c[sizeof(int)];
+	} u;
 
-	return ((int)*c);
+	u.i = 1;
+
+	if (u.c[0] == 1)
+		return (1);
+	else
+		return (0);
 }
