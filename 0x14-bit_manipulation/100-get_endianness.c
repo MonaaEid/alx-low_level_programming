@@ -13,7 +13,7 @@ int get_endianness(void)
     u.i = 1;
 
     if (u.c[0] == 1)
-        return 1; // Little endian
+        return (1);
     else
-        return 0; // Big endian
+        return (0);
 }
