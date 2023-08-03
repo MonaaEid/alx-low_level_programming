@@ -6,7 +6,7 @@
 int get_endianness(void)
 {
 	/**
-	 * @union my_union
+	 * @union - test
 	 * @members
 	 *  int i: the int member
 	 *  char c[sizeof(int)]: the char array member
