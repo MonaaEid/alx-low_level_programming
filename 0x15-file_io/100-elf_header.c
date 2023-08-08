@@ -6,6 +6,16 @@
 #include <sys/stat.h>
 #include <elf.h>
 
+void print_magic(unsigned char *e_ident);
+void print_class(unsigned char *e_ident);
+void print_data(unsigned char *e_ident);
+void print_version(unsigned char *e_ident);
+void print_osabi(unsigned char *e_ident);
+void print_abiversion(unsigned char *e_ident);
+void print_type(uint16_t e_type);
+void print_entry(uint64_t e_entry);
+void print_elf_header(char *filename, int fd);
+
 /**
  * print_magic - prints the magic bytes of an ELF header
  * @e_ident: pointer to the e_ident array
