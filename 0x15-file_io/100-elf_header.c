@@ -107,37 +107,38 @@ void print_version(unsigned char *e_ident)
 void print_osabi(unsigned char *e_ident)
 {
 	printf("  OS/ABI:                            ");
+
 	switch (e_ident[EI_OSABI])
 	{
 	case ELFOSABI_NONE:
-	case ELFOSABI_SYSV:
 		printf("UNIX - System V\n");
 		break;
 	case ELFOSABI_HPUX:
-		printf("HP-UX\n");
+		printf("UNIX - HP-UX\n");
 		break;
 	case ELFOSABI_NETBSD:
-		printf("NetBSD\n");
+		printf("UNIX - NetBSD\n");
 		break;
 	case ELFOSABI_LINUX:
-	case ELFOSABI_GNU:
-		printf("Linux\n");
+		printf("UNIX - Linux\n");
 		break;
 	case ELFOSABI_SOLARIS:
-		printf("Solaris\n");
+		printf("UNIX - Solaris\n");
 		break;
 	case ELFOSABI_IRIX:
-		printf("IRIX\n");
+		printf("UNIX - IRIX\n");
 		break;
 	case ELFOSABI_FREEBSD:
-		printf("FreeBSD\n");
+		printf("UNIX - FreeBSD\n");
 		break;
 	case ELFOSABI_TRU64:
-		printf("TRU64 UNIX\n");
+		printf("UNIX - TRU64\n");
 		break;
 	case ELFOSABI_ARM:
-	case ELFOSABI_AARCH64:
 		printf("ARM\n");
+		break;
+	case ELFOSABI_STANDALONE:
+		printf("Standalone App\n");
 		break;
 	default:
 		printf("<unknown: %x>\n", e_ident[EI_OSABI]);
