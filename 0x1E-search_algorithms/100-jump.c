@@ -1,35 +1,36 @@
 #include "search_algos.h"
 #include <math.h>
-size_t min(int a, int b){
-	if(b>a)
-		return a;
-		else
-		return b;
-}
-int jump_search(int *array, size_t size, int value)
+/**
+ * jump_search - searches for a value in an array
+ * of integers using the Linear search algorithm
+ * @array: the array
+ * @size: size of the given array
+ * @value: the given number we search for
+ * Return: i
+ */
+int jump_search(int *array, size_t size, int value);
 {
+	int len = size;
 	int step = sqrt(size);
-	size_t prev = 0;
+	int prev = 0;
 
-	while (array[min(step, size)-1] < value)
+	if (array ==  NULL)
+		return (-1);
+	while (array[step] < value)
 	{
-		printf("Value checked array[%ld] = [%d]\n", min(step, size) - 1, array[min(step, size) - 1]);
+		printf("Value checked array[%d] = [%d]\n", step, array[step] );
 		prev = step;
-		step += sqrt(size);
-		if (prev >= size)
-			return -1;
+		step += sqrt(len);
 	}
-	printf("Value found between indexes [%li] and [%ld]\n", prev, min(step, size) - 1);
+	printf("Value found between indexes [%d] and [%d]\n", prev, step);
 	while (array[prev] < value)
 	{
+		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
 		prev++;
-
-		if (prev == min(step, size))
-			return -1;
 	}
+	printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
 	if (array[prev] == value)
-		{printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
-		return prev;}
+		return prev;
  
 	return -1;
 }
