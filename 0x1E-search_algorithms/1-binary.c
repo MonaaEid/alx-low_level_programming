@@ -27,17 +27,13 @@ int binary_search_recursive(int *array, size_t low, size_t high, int value)
 		printf("\n");
 
 		if (array[m] == value)
-		{
 			return (m);
-		}
+
 		else if (array[m] < value)
-		{
 			return (binary_search_recursive(array, m + 1, high, value));
-		}
+
 		else
-		{
 			return (binary_search_recursive(array, low, m - 1, value));
-		}
 	}
 	return (-1);
 }
