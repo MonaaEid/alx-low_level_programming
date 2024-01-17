@@ -8,7 +8,7 @@
  * @value: the given number we search for
  * Return: i
  */
-int jump_search(int *array, size_t size, int value);
+int jump_search(int *array, size_t size, int value)
 {
 	int len = size;
 	int step = sqrt(size);
